@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView demo1;
     ImageView demo2;
     ImageView demo3;
+    int w=500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ViewWrapper wrapper = new ViewWrapper(demo3);
-                ObjectAnimator.ofInt(wrapper,"width",500).setDuration(5000).start();
+                ObjectAnimator.ofInt(wrapper,"width",w).setDuration(5000).start();
+                w+=500;
             }
         });
     }
